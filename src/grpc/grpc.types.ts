@@ -6,10 +6,9 @@ import { type Observable } from "rxjs";
  * Use numeric values so they serialize correctly over gRPC.
  */
 enum Algorithm {
-  ALGORITHM_UNSPECIFIED = 0,
-  FROST_ED25519 = 1,
-  FROST_SCHNORR_SECP256K1 = 2,
-  CGGMP24_ECDSA_SECP256K1 = 3,
+  FROST_ED25519 = 0,
+  FROST_SCHNORR_SECP256K1 = 1,
+  CGGMP24_ECDSA_SECP256K1 = 2,
 }
 
 /**
