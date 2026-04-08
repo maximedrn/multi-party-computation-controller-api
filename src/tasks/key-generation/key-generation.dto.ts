@@ -4,7 +4,6 @@ import {
   IsEnum,
   IsInt,
   IsNotEmpty,
-  IsNotIn,
   IsString,
   Length,
   Matches,
@@ -86,7 +85,6 @@ class KeyGenerationRequestDto {
   })
   @IsEnum(Algorithm)
   @Validate(ThresholdWithinParticipants)
-  @IsNotIn([Algorithm.ALGORITHM_UNSPECIFIED])
   algorithm: Algorithm;
 
   /**

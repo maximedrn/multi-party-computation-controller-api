@@ -20,10 +20,15 @@ service Controller {
 
 /** Supported algorithms. */
 enum Algorithm {
-  ALGORITHM_UNSPECIFIED   = 0;
-  FROST_ED25519           = 1;
-  FROST_SCHNORR_SECP256K1 = 2;
-  CGGMP24_ECDSA_SECP256K1 = 3;
+  /** FROST with ed25519 curve. Signature shares are 64 raw bytes (r ‖ s). */
+  FROST_ED25519 = 0;
+  /** FROST with secp256k1 curve. Signature shares are 64 raw bytes (r ‖ s). */
+  FROST_SCHNORR_SECP256K1 = 1;
+  /** 
+   * CGGMP24 protocol with secp256k1 curve. Signature shares 
+   * are r, s, and recovery id.
+   */
+  CGGMP24_ECDSA_SECP256K1 = 2;
 }
 
 message GenerateKeyRequest {
