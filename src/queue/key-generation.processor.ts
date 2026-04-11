@@ -70,11 +70,11 @@ class KeyGenerationProcessor extends WorkerHost {
       throw result.error;
     }
 
-    const publicKey: string = Buffer.from(result.value.publicKey).toString(
-      "hex",
-    );
+    const publicKey: string = Buffer.from(
+      result.value.result.publicKey,
+    ).toString("hex");
     const publicKeyPackage: string = Buffer.from(
-      result.value.publicKeyPackage,
+      result.value.result.publicKeyPackage,
     ).toString("base64");
 
     // Persist key metadata immediately so the signing processor can retrieve
