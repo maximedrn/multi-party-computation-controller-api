@@ -52,8 +52,10 @@ describe("KeyGenerationProcessor", () => {
     // Arrange — mock a successful gRPC response.
     grpcService.generateKey.mockReturnValue(
       okAsync({
-        publicKey: PUBLIC_KEY_BYTES,
-        publicKeyPackage: PUBLIC_KEY_PACKAGE_BYTES,
+        result: {
+          publicKey: PUBLIC_KEY_BYTES,
+          publicKeyPackage: PUBLIC_KEY_PACKAGE_BYTES,
+        },
       }),
     );
 
@@ -71,8 +73,10 @@ describe("KeyGenerationProcessor", () => {
   it("Returns the hex public key and base64 public key package.", async () => {
     grpcService.generateKey.mockReturnValue(
       okAsync({
-        publicKey: PUBLIC_KEY_BYTES,
-        publicKeyPackage: PUBLIC_KEY_PACKAGE_BYTES,
+        result: {
+          publicKey: PUBLIC_KEY_BYTES,
+          publicKeyPackage: PUBLIC_KEY_PACKAGE_BYTES,
+        },
       }),
     );
 
@@ -91,8 +95,10 @@ describe("KeyGenerationProcessor", () => {
   it("Stores key metadata immediately after a successful key generation.", async () => {
     grpcService.generateKey.mockReturnValue(
       okAsync({
-        publicKey: PUBLIC_KEY_BYTES,
-        publicKeyPackage: PUBLIC_KEY_PACKAGE_BYTES,
+        result: {
+          publicKey: PUBLIC_KEY_BYTES,
+          publicKeyPackage: PUBLIC_KEY_PACKAGE_BYTES,
+        },
       }),
     );
 
