@@ -47,6 +47,12 @@ message GenerateKeyRequest {
  * state.
  */
 message GenerateKeyResponse {
+  /** Generated public key and public key package. */
+  KeyGenerationResult result = 1;
+}
+
+/** Key generation result containing the public key and public key package. */
+message KeyGenerationResult {
   /**
    * Canonical public key bytes.
    * - secp256k1 compressed: 33 bytes

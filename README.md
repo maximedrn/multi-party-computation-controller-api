@@ -109,6 +109,8 @@ Content-Type: application/json
 }
 ```
 
+- `Algorithm`: see [documentation](https://shreeed-app.github.io/multi-party-computation-controller-api/enums/grpc_grpc.types.Algorithm.html) for possible enum values.
+
 **Response:** `202 Accepted`
 
 ```json
@@ -116,8 +118,6 @@ Content-Type: application/json
   "jobId": "<job_id: string[UUIDv4]>"
 }
 ```
-
----
 
 ### `POST /signing`
 
@@ -145,8 +145,6 @@ Content-Type: application/json
   "jobId": "<job_id: string[UUIDv4]>"
 }
 ```
-
----
 
 ### `GET /jobs/:jobId`
 

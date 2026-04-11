@@ -29,8 +29,8 @@ interface GenerateKeyRequest {
   readonly participants: number;
 }
 
-/** Response from the `GenerateKey` RPC. */
-interface GenerateKeyResponse {
+/** Key generation result containing the public key and public key package. */
+interface KeyGenerationResult {
   /**
    * Canonical public key bytes.
    *
@@ -44,6 +44,11 @@ interface GenerateKeyResponse {
    * every `Sign` call.
    */
   readonly publicKeyPackage: Buffer;
+}
+
+/** Response from the `GenerateKey` RPC. */
+interface GenerateKeyResponse {
+  readonly result: KeyGenerationResult;
 }
 
 /** Request payload for the `Sign` RPC. */
@@ -137,6 +142,7 @@ export {
   type EcdsaSignature,
   type GenerateKeyRequest,
   type GenerateKeyResponse,
+  type KeyGenerationResult,
   type SignatureResult,
   type SignRequest,
   type SignResponse,
