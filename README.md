@@ -109,7 +109,7 @@ Content-Type: application/json
 }
 ```
 
-- `Algorithm`: see [documentation](https://shreeed-app.github.io/multi-party-computation-controller-api/enums/grpc_grpc.types.Algorithm.html) for possible enum values.
+- `Algorithm`: see [documentation](https://maximedrn.github.io/multi-party-computation-controller-api/enums/grpc_grpc.types.Algorithm.html) for possible enum values.
 
 **Response:** `202 Accepted`
 
@@ -171,9 +171,9 @@ Authorization: Bearer <token>
 }
 ```
 
-* `JobType`: see [documentation](https://shreeed-app.github.io/multi-party-computation-controller-api/enums/jobs_jobs.types.JobType.html) for possible enum values.
-* `JobStatus`: see [documentation](https://shreeed-app.github.io/multi-party-computation-controller-api/enums/jobs_jobs.types.JobStatus.html) for possible enum values.
-* `JobResult`: see [documentation](https://shreeed-app.github.io/multi-party-computation-controller-api/types/jobs_jobs.types.JobResult.html) for possible result structures.
+* `JobType`: see [documentation](https://maximedrn.github.io/multi-party-computation-controller-api/enums/jobs_jobs.types.JobType.html) for possible enum values.
+* `JobStatus`: see [documentation](https://maximedrn.github.io/multi-party-computation-controller-api/enums/jobs_jobs.types.JobStatus.html) for possible enum values.
+* `JobResult`: see [documentation](https://maximedrn.github.io/multi-party-computation-controller-api/types/jobs_jobs.types.JobResult.html) for possible result structures.
 
 **Error response:** `404 Not Found` - job does not exist.
 
