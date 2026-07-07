@@ -1,6 +1,8 @@
 {
+  "tsconfig": "tsconfig.build.json",
   "entryPoints": ["src"],
   "entryPointStrategy": "expand",
+  "exclude": ["**/*.spec.ts"],
   "out": "docs",
   "excludePrivate": false,
   "excludeProtected": false,
@@ -12,7 +14,7 @@
   },
   "externalSymbolLinkMappings": {
     "@types/node": {
-      "\"crypto\".timingSafeEqual": "#"
+      "\"node:crypto\".timingSafeEqual": "#"
     },
     "@nestjs/common": {
       "UnauthorizedException": "#"
