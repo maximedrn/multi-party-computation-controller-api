@@ -69,7 +69,7 @@ class KeyGenerationRequestDto {
   @IsNotEmpty()
   @Length(1, 128)
   @Matches(/^[a-zA-Z0-9_-]+$/)
-  keyIdentifier: string;
+  keyIdentifier!: string;
 
   /**
    * Algorithm to use for distributed key generation.
@@ -85,7 +85,7 @@ class KeyGenerationRequestDto {
   })
   @IsEnum(Algorithm)
   @Validate(ThresholdWithinParticipants)
-  algorithm: Algorithm;
+  algorithm!: Algorithm;
 
   /**
    * Minimum number of nodes required to produce a valid signature (t in
@@ -103,7 +103,7 @@ class KeyGenerationRequestDto {
   @Min(2)
   @Max(255)
   @Validate(ThresholdWithinParticipants)
-  threshold: number;
+  threshold!: number;
 
   /**
    * Total number of nodes participating in the key-generation protocol (n in
@@ -119,7 +119,7 @@ class KeyGenerationRequestDto {
   @IsInt()
   @Min(2)
   @Max(255)
-  participants: number;
+  participants!: number;
 }
 
 /** Response body for a successful `POST /key-generation` (202 Accepted). */
@@ -128,7 +128,7 @@ class KeyGenerationResponseDto {
     description: "Opaque job identifier for status polling.",
     example: v4(),
   })
-  jobId: string;
+  jobId!: string;
 }
 
 export {

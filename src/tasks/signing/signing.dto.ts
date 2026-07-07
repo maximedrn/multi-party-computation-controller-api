@@ -27,7 +27,7 @@ class SigningRequestDto {
   @IsNotEmpty()
   @Length(1, 128)
   @Matches(/^[a-zA-Z0-9_-]+$/)
-  keyIdentifier: string;
+  keyIdentifier!: string;
 
   /**
    * Raw bytes to sign, hex-encoded without a `0x` prefix. No additional
@@ -41,7 +41,7 @@ class SigningRequestDto {
   @IsHexadecimal()
   @IsNotEmpty()
   @Length(2)
-  message: string;
+  message!: string;
 }
 
 /** Response body for a successful `POST /signing` (202 Accepted). */
@@ -50,7 +50,7 @@ class SigningResponseDto {
     description: "Opaque job identifier for status polling.",
     example: v4(),
   })
-  jobId: string;
+  jobId!: string;
 }
 
 export { SigningRequestDto, SigningResponseDto };
