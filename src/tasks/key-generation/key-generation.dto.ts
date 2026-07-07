@@ -134,5 +134,6 @@ class KeyGenerationResponseDto {
 export {
   KeyGenerationRequestDto,
   KeyGenerationResponseDto,
-  ThresholdWithinParticipants,
+  ThresholdWithinParticipants
 };
+
